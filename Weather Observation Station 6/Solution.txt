@@ -17,3 +17,8 @@ Similarly for City names that do not start with vowels - a / e / i / o / u :-
 
 SELECT DISTINCT CITY FROM STATION 
 WHERE CITY NOT IN (SELECT CITY FROM STATION WHERE CITY REGEXP '^[AEIOU]');
+
+Similarly for City names that do not end with vowels - a / e / i / o / u :-
+
+SELECT DISTINCT CITY FROM STATION
+WHERE CITY NOT IN (SELECT CITY FROM STATION WHERE CITY REGEXP '[AEIOU]$');
