@@ -1,3 +1,5 @@
+City Names that start with vowels - a / e / i / o / u :-
+
 SELECT CITY FROM STATION
 WHERE CITY REGEXP '^[AEIOU]';
 
@@ -5,3 +7,8 @@ Similarly for City Names that end with vowels - a / e / i / o / u :-
 
 SELECT DISTINCT CITY FROM STATION
 WHERE CITY REGEXP '[aeiou]$';
+
+Similarly for City Names that start as well as end with vowels - a / e / i / o / u :-
+
+SELECT CITY FROM STATION 
+WHERE CITY REGEXP '^[AEIOU].*[AEIOU]$';
